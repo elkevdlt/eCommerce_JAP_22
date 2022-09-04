@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             //sortAndShowCategories(ORDER_ASC_BY_NAME, resultObj.data);
         }
     });
-
+    //llama a las funciones de ordenamiento cada que se hace click en los diferentes botones
     document.getElementById("sortAsc").addEventListener("click", function () {
         sortAndShowCategories(ORDER_ASC_BY_NAME);
     });
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document.getElementById("sortByCount").addEventListener("click", function () {
         sortAndShowCategories(ORDER_BY_PROD_COUNT);
     });
-
+    //Pone los filtros min y max vacíos, función botón limpiar
     document.getElementById("clearRangeFilter").addEventListener("click", function () {
         document.getElementById("rangeFilterCountMin").value = "";
         document.getElementById("rangeFilterCountMax").value = "";

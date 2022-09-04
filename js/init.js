@@ -7,6 +7,8 @@ const PRODUCT_INFO_COMMENTS_URL = "https://japceibal.github.io/emercado-api/prod
 const CART_INFO_URL = "https://japceibal.github.io/emercado-api/user_cart/";
 const CART_BUY_URL = "https://japceibal.github.io/emercado-api/cart/buy.json";
 const EXT_TYPE = ".json";
+const botonIngresar = document.getElementById("but");
+
 
 //Funciones de los spinners (indicador de carga)
 let showSpinner = function () {
@@ -42,3 +44,9 @@ let getJSONData = function (url) {
       return result;
     });
 }
+//Agrega el usuario ingresado en el login al nav.
+document.addEventListener('DOMContentLoaded', () => {
+  let navLogin = document.getElementById("usrNav");
+  navLogin.innerHTML = `<a class="nav-link" href="my-profile.html">${localStorage.getItem("user")}</a>`
+
+})

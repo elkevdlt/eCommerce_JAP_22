@@ -209,3 +209,8 @@ a.custom-card:hover {
   font-weight: bold;
   margin-bottom: 20px;
 }
+
+#usrNav {
+  /* border: 20px solid yellow; */
+  color: white;
+}
