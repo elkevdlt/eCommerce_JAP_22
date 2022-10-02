@@ -10,6 +10,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -38,11 +39,38 @@
   </nav>
   <main>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      <div id="infoProduct">
       </div>
+
+      <div class="container" id="relProducts">
+        <p><strong>Productos relacionados:</strong></p>
+
+
+      </div>
+
+      <div id="comments">
+      </div>
+      <!-- <div class="alert alert-danger text-center" role="alert">
+      <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      </div> -->
+    </div>
+
+    <div class="comentar" id="comentar">
+      <h3>Comentar:</h3>
+      <textarea name="text" id="txtComentar" cols="30" rows="10"></textarea>
+      <p>Calificación:</p>
+
+      <select name="puntos" id="puntos">
+        <option value="1">1 estrella</option>
+        <option value="2">2 estrellas</option>
+        <option value="3">3 estrellas</option>
+        <option value="4">4 estrellas</option>
+        <option value="5">5 estrellas</option>
+      </select>
+      <button id="btnComentar">Enviar</button>
     </div>
   </main>
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">

@@ -214,3 +214,37 @@ a.custom-card:hover {
   /* border: 20px solid yellow; */
   color: white;
 }
+
+#infoProduct {
+  color: black;
+}
+
+#imgID {
+  width: 230px;
+  height: 170px;
+  margin: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.541);
+}
+
+#relImg {
+  width: 100px;
+  height: 50px;
+
+}
+
+.checked {
+  color: orange;
+}
+
+#comentar {
+  margin-left: 540px;
+}
+
+#comments {
+  margin-bottom: 45px;
+}
+
+#relProducts {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}

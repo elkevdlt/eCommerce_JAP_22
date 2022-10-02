@@ -47,6 +47,15 @@ let getJSONData = function (url) {
 //Agrega el usuario ingresado en el login al nav.
 document.addEventListener('DOMContentLoaded', () => {
   let navLogin = document.getElementById("usrNav");
-  navLogin.innerHTML = `<a class="nav-link" href="my-profile.html">${localStorage.getItem("user")}</a>`
+  navLogin.innerHTML = `<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link" href="my-profile.html">${localStorage.getItem("user")}</a>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+    <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
+    <li><a class="dropdown-item" href="index.html">Cerrar sesión</a></li>
+  </ul>
+</div>`
 
 })

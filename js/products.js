@@ -1,7 +1,12 @@
 let listaDeProductos = [];
+let infoDeProducto = [];
 let minCost = undefined;
 let maxCost = undefined;
 
+function setProductID(id) {
+  localStorage.setItem("productID", id);
+  window.location = "product-info.html"
+}
 //funcion que muesta listado de autos, recibe como parametro el array donde se cargan los datos consultados. Accedo a los productos y los recorro con el for, mediante indice accedo a los autos y los guardo en variable. Con DOM creo el contenedor necesario para mostrar los datos requeridos.
 function showProductList(listaDeProductos) {
 
@@ -12,7 +17,7 @@ function showProductList(listaDeProductos) {
     let product = listaDeProductos.products[i];
     product.cost = parseInt(product.cost); //Parseo a entero el costo del producto.
     if ((product.cost >= minCost || minCost == undefined) && (product.cost <= maxCost || maxCost == undefined)) {
-      productToAppend += `<div onclick="setCatID(${product.id})" class="list-group-item list-group-item-action cursor-active">
+      productToAppend += `<div onclick="setProductID(${product.id})" class="list-group-item list-group-item-action cursor-active">
                 <div class="row">
                     <div class="col-3">
                         <img src="${product.image}" alt="${product.description}" class="img-thumbnail">
@@ -119,3 +124,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   })
 });
+
