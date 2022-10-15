@@ -248,3 +248,41 @@ a.custom-card:hover {
   margin-top: 80px;
   margin-bottom: 80px;
 }
+
+.dropdown {
+  height: 0.5px;
+
+}
+
+.contenedor {
+  display: flex;
+}
+
+#imgCart {
+  width: 110px;
+  height: 70px;
+}
+
+#inputCart {
+  width: 45px;
+}
+
+#envio,
+#tipoEnvio {
+  margin-top: 50px;
+  margin-left: 130px;
+}
+
+#calle {
+  margin-left: 64px;
+}
+
+#esquina {
+  margin-left: 44px;
+  margin-top: 10px;
+}
+
+#numero {
+  margin-top: 10px;
+  margin-left: 40px;
+}
