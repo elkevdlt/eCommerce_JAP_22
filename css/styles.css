@@ -273,16 +273,49 @@ a.custom-card:hover {
   margin-left: 130px;
 }
 
-#calle {
+/* #calle {
   margin-left: 64px;
-}
+} */
 
-#esquina {
+/* #esquina {
   margin-left: 44px;
   margin-top: 10px;
-}
+} */
 
-#numero {
+/* #numero {
   margin-top: 10px;
   margin-left: 40px;
+} */
+
+#modalBtn {
+  text-align: center;
+}
+
+#tarjeta #depo {
+  display: inline-block;
+}
+
+#tablaDepo {
+  margin-top: 15px;
+}
+
+#creditCard1,
+#deposito {
+  margin-top: 8px;
+}
+
+#creditCard1,
+#creditCard2,
+#creditCard3 {
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
+
+#deposito {
+  margin-left: 5px;
+}
+
+#btnFinalizar {
+  margin-top: 2%;
+  margin-left: 48%;
 }

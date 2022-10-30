@@ -42,21 +42,143 @@
       </div> -->
 
     </div>
+
+    <!-- SUBTOTAL INFO -->
+    <div id="subtotalInfo">
+    </div>
+
+    <!-- TIPO DE ENVIO -->
     <div class="contanier" id="tipoEnvio">
-      <h4>Tipo de envío</h4>
-      <input type="radio" value=""> Premium 2 a 5 días(15%) <br>
-      <input type="radio" value=""> Express 5 a 8 días(7%) <br>
-      <input type="radio" value=""> Standard 12 a 15 días(5%)
+      <h3>Tipo de envío</h3>
+      <input type="radio" value="0.15" id="envio1" onclick="chequeado()" name="chkEnvio"> Premium 2 a 5 días(15%) <br>
+      <input type="radio" value="0.07" id="envio2" onclick="chequeado()" name="chkEnvio"> Express 5 a 8 días(7%) <br>
+      <input type="radio" value="0.05" id="envio3" onclick="chequeado()" name="chkEnvio"> Standard 12 a 15 días(5%)
     </div>
+
+    <!-- DIRECCION DE ENVIO -->
     <div class="container" id="envio">
-      <h4>Dirección de envío</h4>
-      <label for="calle">Calle</label>
-      <input type="text" id="calle"><br>
-      <label for="numero">Numero</label>
-      <input type="text" id="numero"><br>
-      <label for="esquina">Esquina</label>
-      <input type="text" id="esquina">
+      <h3>Dirección de envío</h3>
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="col-4">
+          <label for="calle" class="form-label">Calle</label>
+          <input type="text" class="form-control" id="calle" required>
+          <div class="valid-feedback">
+            Ok!
+          </div>
+          <div class="invalid-feedback">
+            No puede estar vacío!
+          </div>
+        </div>
+
+        <div class="col-4">
+          <label for="numero" class="form-label">Numero</label>
+          <input type="text" class="form-control" id="numero" required>
+          <div class="valid-feedback">
+            Ok!
+          </div>
+          <div class="invalid-feedback">
+            No puede estar vacío!
+          </div>
+        </div>
+
+        <div class="col-4">
+          <label for="esquina" class="form-label">Esquina</label>
+          <input type="text" class="form-control" id="esquina" required>
+          <div class="valid-feedback">
+            Ok!
+          </div>
+          <div class="invalid-feedback">
+            No puede estar vacío!
+          </div>
+        </div>
+
+        <!-- BOTON FORMA DE PAGO -->
+        <div id="modalBtn">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Seleccionar forma de pago
+          </button>
+        </div>
     </div>
+
+    <!-- BOTON FINALIZAR COMPRA -->
+    <div class="col-4" id="btnFinalizar">
+      <button type="submit" class="btn btn-primary" id="btnFinaliza">Finalizar compra</button>
+    </div>
+
+    </form>
+    <!-- <h4>Dirección de envío</h4>-->
+
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Método de pago</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- TARJETA DE CREDITO -->
+            <div id="tarjeta">
+              <center>
+                <table>
+                  <thead>
+                    <tr>
+                      <td><input type="radio" name="mPago" value="tarjeta" id="tar"> Tarjeta de crédito</td>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td><label for="tarjeta">Número de tarjeta</label></td>
+                      <td><input type="text" name="tarjeta" id="creditCard1"><br></td>
+                    </tr>
+                    <tr>
+                      <td><label for="cvc">CVC</label></td>
+                      <td><input type="text" name="cvc" id="creditCard2"><br></td>
+                    </tr>
+                    <tr>
+                      <td><label for="vence">Vencimiento (MM/AA)</label></td>
+                      <td><input type="text" name="vence" id="creditCard3"><br></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </center>
+            </div>
+
+            <!-- TRANSFERENCIA -->
+            <div id="depo">
+              <center>
+                <table id="tablaDepo">
+                  <thead>
+                    <tr>
+                      <td><input type="radio" name="mPago" value="deposito" id="dep"> Transferencia bancaria</td>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td><label for="trans">Número de cuenta</label></td>
+                      <td><input type="text" name="trans" id="deposito"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </center>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </main>
   <footer class="text-muted">
     <div class="container">
