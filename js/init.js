@@ -1,5 +1,5 @@
 //Se declaran las constantes con las url donde traer los datos
-const CATEGORIES_URL = "https://japceibal.github.io/emercado-api/cats/cat.json";
+const CATEGORIES_URL = /* "http://localhost:3000/cats" */ "https://japceibal.github.io/emercado-api/cats/cat.json";
 const PUBLISH_PRODUCT_URL = "https://japceibal.github.io/emercado-api/sell/publish.json";
 const PRODUCTS_URL = "https://japceibal.github.io/emercado-api/cats_products/";
 const PRODUCT_INFO_URL = "https://japceibal.github.io/emercado-api/products/";
@@ -56,8 +56,15 @@ document.addEventListener('DOMContentLoaded', () => {
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
     <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
-    <li><a class="dropdown-item" href="index.html">Cerrar sesión</a></li>
+    <li><a class="dropdown-item" href="index.html" id="cerrarSesion">Cerrar sesión</a></li>
   </ul>
 </div>`
+  //remueve el usuario de localStorage al hacer click en cerrar sesion
+  let sesion = document.getElementById("cerrarSesion");
+  sesion.addEventListener('click', () => {
+    localStorage.removeItem("user")
 
+  })
 })
+
+

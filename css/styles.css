@@ -319,3 +319,10 @@ a.custom-card:hover {
   margin-top: 2%;
   margin-left: 48%;
 }
+
+.perfil {
+  width: 20%;
+  padding: 20px;
+  align-items: center;
+  margin-left: 40%;
+}
